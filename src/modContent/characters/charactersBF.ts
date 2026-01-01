@@ -1,7 +1,7 @@
 import { Character, EventStep} from 'afnm-types'
 import { allBFItems } from '../items/itemsBF'
 
-import danWoosungPortrait from '../src/assets/characters/dan_woosung_old.png';
+import danWoosungPortrait from '../src/assets/characters/DanWoosung_old.png';
 
 export const danWoosung: Character = {
     name: 'Dan Woosung',
