@@ -1,31 +1,16 @@
-import { TreasureItem, Technique } from 'afnm-types';
+import { allBFItems } from '../modContent/items/itemsBF'
+import { initializeBFItems } from '../modContent/items/itemsBF'
 
-import icon from '../assets/image.png';
+import { allCharactersBF } from './characters/charactersBF';
+import { initializeBFCharacters } from './characters/charactersBF';
 
-const myTreasure: TreasureItem = {
-  kind: 'treasure',
-  name: 'The Best Treasure',
-  description: 'Wooo mod content.',
-  icon: icon,
-  stacks: 1,
-  rarity: 'mundane',
-  realm: 'coreFormation',
-};
-window.modAPI.actions.addItem(myTreasure);
+function initializeDaoPaths() {
+  console.log('Initializing Path of a Thousand Daos Mod...');
 
-const myTechnique: Technique = {
-  name: 'Test technique',
-  icon: '',
-  type: 'fist',
-  effects: [
-    {
-      kind: 'buffSelf',
-      buff: window.modAPI.gameData.techniqueBuffs.fist.flow,
-      amount: {
-        value: 1,
-        stat: undefined,
-      },
-    },
-  ],
-};
-window.modAPI.actions.addTechnique(myTechnique);
+  initializeBFItems;
+  initializeBFCharacters;
+  
+  console.log('Path of a Thousand Daos Mod loaded successfully!');
+}
+
+initializeDaoPaths;
